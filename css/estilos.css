@@ -507,6 +507,7 @@ video {
 	padding: 6px 15px;
 
 }
+
 #reserva {
 	margin-bottom: 80px;
 }
@@ -521,9 +522,9 @@ video {
 	font-weight: 400;
 	padding: 6px 15px;
 }
+
 .tipoReserva .btn {
 	 background: #00000099;
-
 }
 
 .tipoReserva {
