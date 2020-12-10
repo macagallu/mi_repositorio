@@ -403,12 +403,8 @@ button.principal:hover {
 	font-size: 47px;
 }
 
-.menuP {
-	color: #5A5766; 
-	text-align: justify;
-	font-family: 'Lora'; 
-	font-weight: 400;
-	font-size: 20px;
+.menuImg {
+	text-align: center;
 	
 }
 
