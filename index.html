@@ -50,8 +50,8 @@
 						<ul class="navbar-nav ml-auto">	
 							<li class="nav-item"><a class="btn-2 nav-link active" href="#resto">Resto</a></li>
 							<li class="nav-item"><a class="btn-2 nav-link active" href="#menu">Menu</a></li>
-							<li class="nav-item"><a class="btn-2 nav-link active" href="#reservas">Reservas</a></li>
 							<li class="nav-item"><a class="btn-2 nav-link active" href="#galeria">Galeria</a></li>
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#reservas">Reservas</a></li>
 							<li class="nav-item"><a class="btn-2 nav-link active" href="#contacto">Contacto</a></li>
 						</ul>
 					</div>
@@ -124,80 +124,14 @@
 	<!--MENU-->
 		<section class="menu container-fluid" id="menu">
 			<section class="row">
-				<div class="col-lg-3">
-					<img src="./imagenes/bruscheta.jpg" class="img-fluid" alt="bruscheta" />
-				</div>
-				<article class="menuImg col-lg-6">
+				<article class="menuImg col-lg-12">
 					<figure>
 						<img src="./imagenes/menu.jpg" alt="carta menu del mes"/>
 					</figure>
 				</article>
-			 	<div class="col-lg-3">
-			 		<img src="./imagenes/crepes.jpg" class="img-fluid" alt="crepes de naranja" />
-			 	</div>
 			</section>	
 		</section>
 	<!--FIN MENU-->
-	<!--RESERVAS-->
-		<section class="reservas" id="reservas">
-	    	<video autoplay muted loop id="miVideo">
-				<source src="imagenes/reservascopas3.mp4" type="video/mp4">
-			</video>
-	        <div class="container" data-aos="fade-up">
-	            <div class="row">
-	    			<div class="col-md-8 offset-md-2 text-center">
-	    				<h3 class="reservasTitle">Reservas</h3> 
-	    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
-	    			</div>
-	    		</div>
-	            <form action="" method="post" role="form">
-	            	<div class="row">
-	            	<!--TIPO DE RESERVA-->
-						<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-outline-light active">
-								<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
-							</label>
-							<label class="btn btn-outline-light">
-								<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
-							</label>
-							<label class="btn btn-outline-light disabled" data-trigger="hover">
-								<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
-									<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
-								</div>
-								<input type="radio" name="evento" id="Otro"> 
-							</label>
-						</div>
-					</div>
-					<!--DATOS DE LA RESERVA-->
-		            <div class="form-row">
-		                <div class="col-md-6 form-group">
-		                	<input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre y Apellido">
-		                </div>
-		                <div class="col-md-6 form-group">
-		                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
-		                </div>
-		                <div class="col-md-6 form-group">
-		                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
-		                </div>
-		                <div class="col-md-6 form-group">
-		                    <input type="date" name="date" class="form-control" id="date" placeholder="Día">
-		                </div>
-		                <div class="col-md-6 form-group">
-		                    <input type="time" class="form-control" name="time" id="time" placeholder="Horario">
-		                </div>
-		                <div class="col-md-6 form-group">
-		                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
-		                </div>
-		            </div>
-	              	<div class="row">
-	              		<div class="col-12 text-right" style="margin-bottom: 50px">
-	              			<button id="reserva" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
-	              		</div>
-	    			</div>
-	            </form>
-	    	</div>
-		</section>
-	<!--FIN RESERVAS-->
 	<!--GALERIA-->
 		<section id="galeria" class="galeria container-fluid">
 			<h4 class="galeriaTitle">Galeria</h4>
@@ -226,6 +160,66 @@
 		</section>
 	</main>
 <!--FIN GALERIA-->
+<!--RESERVAS-->
+		<section class="reservas" id="reservas">
+	    	<video autoplay muted loop id="miVideo">
+				<source src="imagenes/reservascopas3.mp4" type="video/mp4">
+			</video>
+	        <div class="container" data-aos="fade-up">
+	            <div class="row">
+	    			<div class="col-md-8 offset-md-2 text-center">
+	    				<h3 class="reservasTitle">Reservas</h3> 
+	    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
+	    			</div>
+	    		</div>
+<!--TIPO DE RESERVA-->
+	            <form action="" method="post" role="form">
+	            	<div class="row">
+						<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-outline-light active">
+								<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
+							</label>
+							<label class="btn btn-outline-light">
+								<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
+							</label>
+							<label class="btn btn-outline-light disabled" data-trigger="hover">
+								<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
+									<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
+								</div>
+								<input type="radio" name="evento" id="Otro"> 
+							</label>
+						</div>
+					</div>
+<!--DATOS DE LA RESERVA-->
+		            <div class="form-row">
+		                <div class="col-md-6 form-group">
+		                	<input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre y Apellido">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="date" name="date" class="form-control" id="date" placeholder="Día">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="time" class="form-control" name="time" id="time" placeholder="Horario">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
+		                </div>
+		            </div>
+	              	<div class="row">
+	              		<div class="col-12 text-right" style="margin-bottom: 50px">
+	              			<button id="reserva" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
+	              		</div>
+	    			</div>
+	            </form>
+	    	</div>
+		</section>
+<!--FIN RESERVAS-->
 <!--FOOTER CONTACTO-->
 	<footer class="contacto container-fluid" id="contacto">
 		<div class="row">

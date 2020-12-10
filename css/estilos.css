@@ -389,22 +389,17 @@ button.principal:hover {
 
 
 /*---MENU---*/
-
 .menu {
-	padding-top: 67px;
-	padding-left: 0px;
-	padding-right: 0px;
+	background-color: black; 
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../imagenes/crepes.jpg); 
+	background-position: center;
+	background-repeat: no-repeat; 
+	background-size: cover;  
+	max-width: 100%;
 }
-.especiales {
-	color: #003D5B; 
-	text-align: center;
-	font-family: 'Playfair Display', serif;
-	font-weight: 400;
-	font-size: 47px;
-}
-
 .menuImg {
 	text-align: center;
+	max-height: 100vh;
 	
 }
 
