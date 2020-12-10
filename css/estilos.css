@@ -81,6 +81,13 @@ a {
  	text-transform: uppercase;
 }
 
+.logo {
+	transition: opacity 200ms;
+}
+.logo:hover {
+	opacity: 0.7;
+
+}
 
 /*---ALERTA Y MODAL---*/
 

@@ -42,7 +42,7 @@
 		<header class="container-fluid">
 			<nav class="nav2 navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
 				<section class="container">	
-					<a href="index.html"><img src="./imagenes/logoindex.png" class="navbar-brand imgNav" width="63" height="70" alt="logo restaurant"/></a>
+					<a href="index.html"><img src="./imagenes/logoindex.png" class="logo navbar-brand imgNav" width="63" height="70" alt="logo restaurant"/></a>
 					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#hamburguesa" aria-controls="hamburguesa" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="oi oi-menu"><i class="burger fas fa-bars"></i></span>
 					</button>
@@ -59,170 +59,172 @@
 			</nav>
 		</header>
 <!--TITULOS Y BOTON-->
-	<main  id="home" class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="alerta alert alert-warning alert-dismissible fade show" role="alert">
-					<button type="button" class="cerrarAlerta close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-			  			<i class="icono fas fa-shield-virus"></i> NUEVOS PROTOCOLOS SOBRE COVID-19 >
-					<button type="button" class="alertaInfo btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#exampleModal">+INFO</button>
-				</div>
-			</div>
-		</div>
-<!--FIN TITULOS-->
-<!--MAIN-->
-		<section class="row">
-			<div class="titulos col-md-12">
-				<h1>CheRIE</h1>
-				<h2>AMAMOS LA COCINA FRANCESA</h2>
-			</div>
-		</section>
-		<div class="botonIndex row">
-			<section class="col-md-12">
-				<button type="button" class="principal btn btn-outline-light">
-					<a href="#reserva">RESERVE UNA MESA</a>
-				</button>
-			</section>
-		</div>
-	</main>
-<!--FIN MAIN-->
-<!--RESTO-->
-	<article class="elResto container" id="resto">
-		<div class="row">
-			<div class="col-md-12">
-				<h2>El Restaurant</h2>
-				<h3>Bienvenido a Nuestra Cocina</h3>	
-			</div>
-		</div>
-		<section class="restoFlex row">	
-			<div class="col-md-5">
-				<aside class="imgResto">
-					<img src="./imagenes/chef1.jpg" class="img-fluid" alt="Grupo de chefs cocinando" />
-					<img src="./imagenes/chef2.jpg" class="img-fluid" alt="Chef decorando plato de comida" />
-				</aside>
-			</div>
-			<article class="col-md-7">
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iste voluptatem nihil quaerat ipsum velit, molestias distinctio, enim eaque sed aliquid doloribus ex adipisci labore. Impedit nam doloremque possimus sed?
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				<br>
-				Solamente a través de la cocina se puede expresar
-				belleza, poesía, humor, felicidad, belleza y armonía.
-				<br>
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quasi. Aliquam praesentium error magni non libero dicta quasi provident culpa rerum sapiente quidem fuga ullam eius commodi debitis omnis, modi. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Cupiditate dolor enim aperiam iusto fugit deleniti ipsam optio inventore blanditiis velit dolorem, doloribus tempora ab, facilis voluptas! Harum quia aspernatur quam.
-				</p>
-				<div class="logoResto">
-					<img src="./imagenes/logoresto.png" width="95" height="115"/>
-				</div>
-			</article>
-		</section>
-	</article>
-<!--FIN RESTO-->
-<!--MENU-->
-	<section class="menu container-fluid" id="menu">
-		<section class="row">
-			<div class="col-lg-3">
-				<img src="./imagenes/bruscheta.jpg" class="img-fluid" alt="bruscheta" />
-			</div>
-			<article class="menuP col-lg-6">
-				<figure>
-					<img src="./imagenes/menu.jpg" alt="carta menu del mes"/>
-				</figure>
-			</article>
-		 	<div class="col-lg-3">
-		 		<img src="./imagenes/crepes.jpg" class="img-fluid" alt="crepes de naranja" />
-		 	</div>
-		</section>	
-	</section>
-<!--FIN MENU-->
-<!--RESERVAS-->
-	<section class="reservas" id="reservas">
-    	<video autoplay muted loop id="miVideo">
-			<source src="imagenes/reservascopas3.mp4" type="video/mp4">
-		</video>
-        <div class="container" data-aos="fade-up">
-            <div class="row">
-    			<div class="col-md-8 offset-md-2 text-center">
-    				<h3 class="reservasTitle">Reservas</h3> 
-    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
-    			</div>
-    		</div>
-            <form action="" method="post" role="form">
-            	<div class="row">
-            	<!--TIPO DE RESERVA-->
-					<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
-						<label class="btn btn-outline-light active">
-							<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
-						</label>
-						<label class="btn btn-outline-light">
-							<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
-						</label>
-						<label class="btn btn-outline-light disabled" data-trigger="hover">
-							<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
-								<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
-							</div>
-							<input type="radio" name="evento" id="Otro"> 
-						</label>
+	<main>
+		<section  id="home" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alerta alert alert-warning alert-dismissible fade show" role="alert">
+						<button type="button" class="cerrarAlerta close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				  			<i class="icono fas fa-shield-virus"></i> NUEVOS PROTOCOLOS SOBRE COVID-19 >
+						<button type="button" class="alertaInfo btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#exampleModal">+INFO</button>
 					</div>
 				</div>
-				<!--DATOS DE LA RESERVA-->
-	            <div class="form-row">
-	                <div class="col-md-6 form-group">
-	                	<input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre y Apellido">
-	                </div>
-	                <div class="col-md-6 form-group">
-	                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
-	                </div>
-	                <div class="col-md-6 form-group">
-	                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
-	                </div>
-	                <div class="col-md-6 form-group">
-	                    <input type="date" name="date" class="form-control" id="date" placeholder="Día">
-	                </div>
-	                <div class="col-md-6 form-group">
-	                    <input type="time" class="form-control" name="time" id="time" placeholder="Horario">
-	                </div>
-	                <div class="col-md-6 form-group">
-	                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
-	                </div>
-	            </div>
-              	<div class="row">
-              		<div class="col-12 text-right" style="margin-bottom: 50px">
-              			<button id="reserva" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
-              		</div>
-    			</div>
-            </form>
-    	</div>
-	</section>
-<!--FIN RESERVAS-->
-<!--GALERIA-->
-	<section id="galeria" class="galeria container-fluid">
-		<h4 class="galeriaTitle">Galeria</h4>
-		<div class="row">
-		    <div class="galeriaImg col-md-4">
-		        <figure><img src="./imagenes/mariscos.jpg" class="img-thumbnail" alt="sarten con mariscos"></figure>
-		    </div>
-		    <div class="galeriaImg col-md-4">
-	      		<figure><img src="./imagenes/mesa.jpg" class="img-thumbnail" alt="mesa servida"></figure>
-		    </div>
-		    <div class="galeriaImg col-md-4">
-		      	<figure><img src="./imagenes/comensales.jpg" class="img-thumbnail" alt="comensales comiendo ensalada"></figure>
-		    </div>
-	  	</div>
-	  	<div class="row">
-	  		<div class="galeriaImg col-md-4">
-		       <figure><img src="./imagenes/plato_entrada.jpg" class="img-thumbnail" alt="plato de entrada servido en la mesa"></figure>
-		    </div>
-		    <div class="galeriaImg col-md-4">
-	      		<figure><img src="./imagenes/pasta.jpg" class="img-thumbnail" alt="chef cocinando pasta"></figure>
-		    </div>
-		    <div class="galeriaImg col-md-4">
-		      	<figure><img src="./imagenes/vegetales.jpg" class="img-thumbnail" alt="vegetales grillados"></figure>
-		    </div>
-	  	</div>
-	</section>
+			</div>
+	<!--FIN TITULOS-->
+	<!--MAIN-->
+			<section class="row">
+				<div class="titulos col-md-12">
+					<h1>CheRIE</h1>
+					<h2>AMAMOS LA COCINA FRANCESA</h2>
+				</div>
+			</section>
+			<div class="botonIndex row">
+				<section class="col-md-12">
+					<button type="button" class="principal btn btn-outline-light">
+						<a href="#reserva">RESERVE UNA MESA</a>
+					</button>
+				</section>
+			</div>
+		</section>
+	<!--FIN MAIN-->
+	<!--RESTO-->
+		<article class="elResto container" id="resto">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>El Restaurant</h2>
+					<h3>Bienvenido a Nuestra Cocina</h3>	
+				</div>
+			</div>
+			<section class="restoFlex row">	
+				<div class="col-md-5">
+					<aside class="imgResto">
+						<img src="./imagenes/chef1.jpg" class="img-fluid" alt="Grupo de chefs cocinando" />
+						<img src="./imagenes/chef2.jpg" class="img-fluid" alt="Chef decorando plato de comida" />
+					</aside>
+				</div>
+				<article class="col-md-7">
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iste voluptatem nihil quaerat ipsum velit, molestias distinctio, enim eaque sed aliquid doloribus ex adipisci labore. Impedit nam doloremque possimus sed?
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					<br>
+					Solamente a través de la cocina se puede expresar
+					belleza, poesía, humor, felicidad, belleza y armonía.
+					<br>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quasi. Aliquam praesentium error magni non libero dicta quasi provident culpa rerum sapiente quidem fuga ullam eius commodi debitis omnis, modi. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Cupiditate dolor enim aperiam iusto fugit deleniti ipsam optio inventore blanditiis velit dolorem, doloribus tempora ab, facilis voluptas! Harum quia aspernatur quam.
+					</p>
+					<div class="logoResto">
+						<img src="./imagenes/logoresto.png" width="95" height="115"/>
+					</div>
+				</article>
+			</section>
+		</article>
+	<!--FIN RESTO-->
+	<!--MENU-->
+		<section class="menu container-fluid" id="menu">
+			<section class="row">
+				<div class="col-lg-3">
+					<img src="./imagenes/bruscheta.jpg" class="img-fluid" alt="bruscheta" />
+				</div>
+				<article class="menuP col-lg-6">
+					<figure>
+						<img src="./imagenes/menu.jpg" alt="carta menu del mes"/>
+					</figure>
+				</article>
+			 	<div class="col-lg-3">
+			 		<img src="./imagenes/crepes.jpg" class="img-fluid" alt="crepes de naranja" />
+			 	</div>
+			</section>	
+		</section>
+	<!--FIN MENU-->
+	<!--RESERVAS-->
+		<section class="reservas" id="reservas">
+	    	<video autoplay muted loop id="miVideo">
+				<source src="imagenes/reservascopas3.mp4" type="video/mp4">
+			</video>
+	        <div class="container" data-aos="fade-up">
+	            <div class="row">
+	    			<div class="col-md-8 offset-md-2 text-center">
+	    				<h3 class="reservasTitle">Reservas</h3> 
+	    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
+	    			</div>
+	    		</div>
+	            <form action="" method="post" role="form">
+	            	<div class="row">
+	            	<!--TIPO DE RESERVA-->
+						<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
+							<label class="btn btn-outline-light active">
+								<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
+							</label>
+							<label class="btn btn-outline-light">
+								<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
+							</label>
+							<label class="btn btn-outline-light disabled" data-trigger="hover">
+								<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
+									<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
+								</div>
+								<input type="radio" name="evento" id="Otro"> 
+							</label>
+						</div>
+					</div>
+					<!--DATOS DE LA RESERVA-->
+		            <div class="form-row">
+		                <div class="col-md-6 form-group">
+		                	<input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre y Apellido">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="date" name="date" class="form-control" id="date" placeholder="Día">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="time" class="form-control" name="time" id="time" placeholder="Horario">
+		                </div>
+		                <div class="col-md-6 form-group">
+		                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
+		                </div>
+		            </div>
+	              	<div class="row">
+	              		<div class="col-12 text-right" style="margin-bottom: 50px">
+	              			<button id="reserva" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
+	              		</div>
+	    			</div>
+	            </form>
+	    	</div>
+		</section>
+	<!--FIN RESERVAS-->
+	<!--GALERIA-->
+		<section id="galeria" class="galeria container-fluid">
+			<h4 class="galeriaTitle">Galeria</h4>
+			<div class="row">
+			    <div class="galeriaImg col-md-4">
+			        <figure><img src="./imagenes/mariscos.jpg" class="img-thumbnail" alt="sarten con mariscos"></figure>
+			    </div>
+			    <div class="galeriaImg col-md-4">
+		      		<figure><img src="./imagenes/mesa.jpg" class="img-thumbnail" alt="mesa servida"></figure>
+			    </div>
+			    <div class="galeriaImg col-md-4">
+			      	<figure><img src="./imagenes/comensales.jpg" class="img-thumbnail" alt="comensales comiendo ensalada"></figure>
+			    </div>
+		  	</div>
+		  	<div class="row">
+		  		<div class="galeriaImg col-md-4">
+			       <figure><img src="./imagenes/plato_entrada.jpg" class="img-thumbnail" alt="plato de entrada servido en la mesa"></figure>
+			    </div>
+			    <div class="galeriaImg col-md-4">
+		      		<figure><img src="./imagenes/pasta.jpg" class="img-thumbnail" alt="chef cocinando pasta"></figure>
+			    </div>
+			    <div class="galeriaImg col-md-4">
+			      	<figure><img src="./imagenes/vegetales.jpg" class="img-thumbnail" alt="vegetales grillados"></figure>
+			    </div>
+		  	</div>
+		</section>
+	</main>
 <!--FIN GALERIA-->
 <!--FOOTER CONTACTO-->
 	<footer class="contacto container-fluid" id="contacto">
@@ -261,7 +263,6 @@
 			</article>
 		</div>
 	</footer>
-</main>
 <!--FIN FOOTER CONTACTO-->
 		<script src="./js/jquery-3.5.1.slim.min.js"></script>
 		<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
