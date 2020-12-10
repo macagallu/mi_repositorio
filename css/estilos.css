@@ -398,11 +398,13 @@ button.principal:hover {
 	max-width: 100%;
 }
 .menuImg {
-	text-align: center;
-	max-height: 100vh;
-	
+	text-align: center;	
 }
 
+.menuImg img {
+	  height: calc(100vh - 100px);
+	  margin-top: 20px;
+}
 
 /*---RESERVAS---*/
 .popup {
@@ -519,6 +521,11 @@ video {
 	font-weight: 400;
 	padding: 6px 15px;
 }
+.tipoReserva .btn {
+	 background: #00000099;
+
+}
+
 .tipoReserva {
 	margin-bottom: 25px;
 }

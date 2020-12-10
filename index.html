@@ -175,19 +175,21 @@
 <!--TIPO DE RESERVA-->
 	            <form action="" method="post" role="form">
 	            	<div class="row">
-						<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
-							<label class="btn btn-outline-light active">
-								<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
-							</label>
-							<label class="btn btn-outline-light">
-								<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
-							</label>
-							<label class="btn btn-outline-light disabled" data-trigger="hover">
-								<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
-									<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
-								</div>
-								<input type="radio" name="evento" id="Otro"> 
-							</label>
+	            		<div class="col-md-6">
+							<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
+								<label class="btn btn-outline-light active">
+									<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
+								</label>
+								<label class="btn btn-outline-light">
+									<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
+								</label>
+								<label class="btn btn-outline-light disabled" data-trigger="hover">
+									<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
+										<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
+									</div>
+									<input type="radio" name="evento" id="Otro"> 
+								</label>
+							</div>
 						</div>
 					</div>
 <!--DATOS DE LA RESERVA-->
