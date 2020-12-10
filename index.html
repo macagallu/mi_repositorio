@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Nuestro exclusivo restaurant francés, ubicado en Buenos Aires, te transportará a una experiencia gastronómica única. Enterate de que se trata.">
+	<meta name="keywords" content="restaurante, frances, reserva, Buenos Aires, Argentina, exclusivo, gastronomico, almuerzo, cena">
+	<title>Cherie Restaurant</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Homemade+Apple&family=Lato&family=Lora&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/5d0ebeca49.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/estilos.css"/>
+</head>
+
+<!--ALERTA Y MODAL-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+			    <div class="modal-header">
+			        <p class="modalTitle modal-title" id="exampleModalLabel"><i class="far fa-bookmark"></i> Nuestro Compromiso</p>
+			    </div>
+		    	<div class="modal-body">
+			        <p class="modalP"> No hay nada que nos agrade más que seguir compartiendo nuestra pasión con nuestros clientes. Por eso, establecemos las siguientes medidas de seguridad, para cuidarnos y cuidar a los demás.</p>     
+			        <p class="modalP"><i class="iconos far fa-calendar-check"></i> Solicite una reserva, por protocolo, no podrán asistir más de 4 personas por mesa. Los eventos se encuentran suspendidos hasta nuevo aviso.</p>
+			        <p class="modalP"><i class="iconos fas fa-thermometer-half"></i> Por su seguridad, se le tomará la temperatura a cada cliente al ingresar al restaurant. </p>
+			        <p class="modalP"><i class="iconos fas fa-hand-holding-medical"></i> Usted y sus acompañantes tendrán a total disposición sanitizantes para manos en todas las áreas públicas del restaurant.</p>
+			        <p class="modalP"><i class="iconos fas fa-people-arrows"></i> Para el resguardo de todos los comensales, las mesas serán dispuestas con 2mts de separación entre ellas, por lo que el salón operará al 50% de su capacidad.</p>
+			        <p class="modalP"><i class="iconos fas fa-head-side-mask"></i> Por ultimo, para su tranquilidad, hemos capacitado a nuestro personal sobre las nuevas medidas implementadas y las políticas establecidas sobre higiene y distanciamiento social.</p>  
+			        <br>
+			        <p class="modalP">Gracias por elegirnos,
+			        <br>
+			        <p class="firma">cherie .</p>
+			    </div>
+			    <div class="modal-footer">
+			    	<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Entendido</button>
+			    </div>
+	    	</div>
+		</div>
+	</div>
+	<body>
+<!--NAVBAR-->
+		<header class="container-fluid">
+			<nav class="nav2 navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+				<section class="container">	
+					<a href="index.html"><img src="./imagenes/logoindex.png" class="navbar-brand imgNav" width="63" height="70" alt="logo restaurant"/></a>
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#hamburguesa" aria-controls="hamburguesa" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="oi oi-menu"><i class="burger fas fa-bars"></i></span>
+					</button>
+					<div class="collapse navbar-collapse" id="hamburguesa" style="">
+						<ul class="navbar-nav ml-auto">	
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#resto">Resto</a></li>
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#menu">Menu</a></li>
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#reservas">Reservas</a></li>
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#galeria">Galeria</a></li>
+							<li class="nav-item"><a class="btn-2 nav-link active" href="#contacto">Contacto</a></li>
+						</ul>
+					</div>
+				</section>
+			</nav>
+		</header>
+<!--TITULOS Y BOTON-->
+	<main  id="home" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="alerta alert alert-warning alert-dismissible fade show" role="alert">
+					<button type="button" class="cerrarAlerta close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			  			<i class="icono fas fa-shield-virus"></i> NUEVOS PROTOCOLOS SOBRE COVID-19 >
+					<button type="button" class="alertaInfo btn btn-sm btn-outline-warning" data-toggle="modal" data-target="#exampleModal">+INFO</button>
+				</div>
+			</div>
+		</div>
+<!--FIN TITULOS-->
+<!--MAIN-->
+		<section class="row">
+			<div class="titulos col-md-12">
+				<h1>CheRIE</h1>
+				<h2>AMAMOS LA COCINA FRANCESA</h2>
+			</div>
+		</section>
+		<div class="botonIndex row">
+			<section class="col-md-12">
+				<button type="button" class="principal btn btn-outline-light">
+					<a href="#reserva">RESERVE UNA MESA</a>
+				</button>
+			</section>
+		</div>
+	</main>
+<!--FIN MAIN-->
+<!--RESTO-->
+	<article class="elResto container" id="resto">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>El Restaurant</h2>
+				<h3>Bienvenido a Nuestra Cocina</h3>	
+			</div>
+		</div>
+		<section class="restoFlex row">	
+			<div class="col-md-5">
+				<aside class="imgResto">
+					<img src="./imagenes/chef1.jpg" class="img-fluid" alt="Grupo de chefs cocinando" />
+					<img src="./imagenes/chef2.jpg" class="img-fluid" alt="Chef decorando plato de comida" />
+				</aside>
+			</div>
+			<article class="col-md-7">
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iste voluptatem nihil quaerat ipsum velit, molestias distinctio, enim eaque sed aliquid doloribus ex adipisci labore. Impedit nam doloremque possimus sed?
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				<br>
+				Solamente a través de la cocina se puede expresar
+				belleza, poesía, humor, felicidad, belleza y armonía.
+				<br>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, quasi. Aliquam praesentium error magni non libero dicta quasi provident culpa rerum sapiente quidem fuga ullam eius commodi debitis omnis, modi. Lorem ipsum dolor sit amet consectetur adipisicing, elit. Cupiditate dolor enim aperiam iusto fugit deleniti ipsam optio inventore blanditiis velit dolorem, doloribus tempora ab, facilis voluptas! Harum quia aspernatur quam.
+				</p>
+				<div class="logoResto">
+					<img src="./imagenes/logoresto.png" width="95" height="115"/>
+				</div>
+			</article>
+		</section>
+	</article>
+<!--FIN RESTO-->
+<!--MENU-->
+	<section class="menu container-fluid" id="menu">
+		<section class="row">
+			<div class="col-lg-3">
+				<img src="./imagenes/bruscheta.jpg" class="img-fluid" alt="bruscheta" />
+			</div>
+			<article class="menuP col-lg-6">
+				<figure>
+					<img src="./imagenes/menu.jpg" alt="carta menu del mes"/>
+				</figure>
+			</article>
+		 	<div class="col-lg-3">
+		 		<img src="./imagenes/crepes.jpg" class="img-fluid" alt="crepes de naranja" />
+		 	</div>
+		</section>	
+	</section>
+<!--FIN MENU-->
+<!--RESERVAS-->
+	<section class="reservas" id="reservas">
+    	<video autoplay muted loop id="miVideo">
+			<source src="imagenes/reservascopas3.mp4" type="video/mp4">
+		</video>
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+    			<div class="col-md-8 offset-md-2 text-center">
+    				<h3 class="reservasTitle">Reservas</h3> 
+    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
+    			</div>
+    		</div>
+            <form action="" method="post" role="form">
+            	<div class="row">
+            	<!--TIPO DE RESERVA-->
+					<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
+						<label class="btn btn-outline-light active">
+							<input type="radio" name="evento" id="Almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
+						</label>
+						<label class="btn btn-outline-light">
+							<input type="radio" name="evento" id="Cena"><i class="fas fa-glass-cheers"></i> Cena
+						</label>
+						<label class="btn btn-outline-light disabled" data-trigger="hover">
+							<div class="popup" onclick="myFunction()"><i class="fas fa-cocktail"></i>Otro
+								<span class="popuptext" id="myPopup">Debido al COVID-19, no se realizaran eventos.</span>
+							</div>
+							<input type="radio" name="evento" id="Otro"> 
+						</label>
+					</div>
+				</div>
+				<!--DATOS DE LA RESERVA-->
+	            <div class="form-row">
+	                <div class="col-md-6 form-group">
+	                	<input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Nombre y Apellido">
+	                </div>
+	                <div class="col-md-6 form-group">
+	                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+	                </div>
+	                <div class="col-md-6 form-group">
+	                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
+	                </div>
+	                <div class="col-md-6 form-group">
+	                    <input type="date" name="date" class="form-control" id="date" placeholder="Día">
+	                </div>
+	                <div class="col-md-6 form-group">
+	                    <input type="time" class="form-control" name="time" id="time" placeholder="Horario">
+	                </div>
+	                <div class="col-md-6 form-group">
+	                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
+	                </div>
+	            </div>
+              	<div class="row">
+              		<div class="col-12 text-right" style="margin-bottom: 50px">
+              			<button id="reserva" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
+              		</div>
+    			</div>
+            </form>
+    	</div>
+	</section>
+<!--FIN RESERVAS-->
+<!--GALERIA-->
+	<section id="galeria" class="galeria container-fluid">
+		<h4 class="galeriaTitle">Galeria</h4>
+		<div class="row">
+		    <div class="galeriaImg col-md-4">
+		        <figure><img src="./imagenes/mariscos.jpg" class="img-thumbnail" alt="sarten con mariscos"></figure>
+		    </div>
+		    <div class="galeriaImg galeria2 col-md-4">
+	      		<figure><img src="./imagenes/mesa.jpg" class="img-thumbnail" alt="mesa servida"></figure>
+		    </div>
+		    <div class="galeriaImg col-md-4">
+		      	<figure><img src="./imagenes/comensales.jpg" class="img-thumbnail" alt="comensales comiendo ensalada"></figure>
+		    </div>
+	  	</div>
+	  	<div class="row">
+	  		<div class="galeriaImg col-md-4">
+		       <figure><img src="./imagenes/plato_entrada.jpg" class="img-thumbnail" alt="plato de entrada servido en la mesa"></figure>
+		    </div>
+		    <div class="galeriaImg col-md-4">
+	      		<figure><img src="./imagenes/pasta.jpg" class="img-thumbnail" alt="chef cocinando pasta"></figure>
+		    </div>
+		    <div class="galeriaImg col-md-4">
+		      	<figure><img src="./imagenes/vegetales.jpg" class="img-thumbnail" alt="vegetales grillados"></figure>
+		    </div>
+	  	</div>
+	</section>
+<!--FIN GALERIA-->
+<!--FOOTER CONTACTO-->
+	<footer class="contacto container-fluid" id="contacto">
+		<div class="row">
+			<aside class="col-md-6" class="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.68168877432!2d-58.573383207134555!3d-34.615743688997895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1603288504420!5m2!1ses!2sar" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</aside>
+			<article class="col-md-6">
+				<h4 class="redesTitle">Encuentrenos en nuestras redes</h4>
+				<div class="row">
+					<div class="col-md-6">
+						<p>Horarios de atención telefónica</p>
+						<p>Lunes de 09:00hs a 22hs
+						<br>
+						Martes de 09:00hs a 22hs
+						<br>
+						Miércoles de 09:00hs a 22hs
+						<br>
+						Jueves de 09:00hs a 23hs
+						<br>
+						Viernes de 09:00hs a 23hs
+						<br>
+						Sábados de 09:00hs a 23hs
+						<br>
+						Domingos de 09:00hs a 22hs
+						</p>
+					</div>
+				</div>
+				<div class="redesSociales row">
+					<div class="col-md-12">
+						<a href="https://es-la.facebook.com/"><img src="./imagenes/facebook1.png" width="40" height="40" alt="red social facebook"></a>
+						<a href="https://www.tripadvisor.com.ar/Restaurants"><img src="./imagenes/tripadvisor1.png" width="40" height="40" alt="red tripadvisor"></a>
+						<a href="https://www.instagram.com/?hl=es-la"><img src="./imagenes/instagram1.png" width="40" height="40" alt="red social instagram"></a>
+					</div>
+				</div>
+			</article>
+		</div>
+	</footer>
+<!--FIN FOOTER CONTACTO-->
+		<script src="./js/jquery-3.5.1.slim.min.js"></script>
+		<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+		<script> function myFunction() { var popup = document.getElementById("myPopup");
+  			popup.classList.toggle("show");}</script>
+	</body>
+</html>

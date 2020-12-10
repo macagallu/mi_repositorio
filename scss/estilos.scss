@@ -1,0 +1,539 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+
+header {
+	z-index: 100;
+	position: sticky;
+	top: 0;
+	right:0;
+	left:0;
+	background-color: rgba(0, 0, 0, 0.62); 
+	box-shadow: 4px 5px 9px -4px black;
+	nav {
+		padding: 0px;		
+		 ul {
+			word-spacing: 10px;
+			text-align: center;
+		}
+		 li { 
+		 	color: white;
+		 	text-decoration: none;
+			list-style: none;
+			word-spacing: 10px;
+			font-family: 'Lato', sans-serif;
+			font-size: 12.3px;
+			font-weight: 700;
+			letter-spacing: 0.2px;
+			display: inline-block; 
+			padding: 1px;
+			 a {
+			 	color: white;
+			 	text-decoration: none;
+ 				text-transform: uppercase;
+			 	 &:after {
+			 	 	color: white;
+					display: block;
+				    content: "";
+				    border-bottom: solid 1px #ffffff;
+				    width: 85%;
+				    border-radius: 1px;
+				    transform: scaleX(0);
+				    transition: transform 290ms ease-in-out;
+				    transform-origin: 100% 50%;
+					}
+			     &:hover:after {
+			     	color: white;
+				    transform: scaleX(1);
+				    transform-origin: 0 50%;
+				    text-decoration: none;
+					}
+				 &:link {
+				 	color: white;
+ 					text-decoration: none;
+ 				}
+ 				
+				 &:visited {
+				 	color: white;
+				 	text-decoration: none;	
+				 			
+				 		}
+				 	}   
+				}
+    		}
+    	}
+
+
+
+
+
+body {
+	position: relative;
+	margin: 0;
+	height: 100%;
+}
+.burger {
+	color: white;
+	font-size: 27px;
+}
+
+/*---ALERTA Y MODAL---*/
+
+.alerta {
+	padding: 5px;
+	font-size: 14px;
+	font-family: 'Nunito', serif;
+	color: #B08F7A;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-left: 13px;
+	vertical-align: text-bottom;
+}
+
+.alertaInfo {
+	font-family: 'Nunito', serif;
+	font-weight: bold;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.iconos {
+	font-size: 20px;
+	color: #2E3532;
+}
+
+.p1 {
+	color: #AD8A64;
+	word-spacing: 2px;
+	font-family: 'Libre Baskerville', serif;
+	font-weight: lighter;
+	font-size: 14px;
+	letter-spacing: 0.2px;
+	text-align: justify;
+
+}
+
+h5.p1 {
+	color: #2E3532;
+	word-spacing: 2px;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	text-align: justify;
+
+}
+
+
+/*---- INDEX ----*/
+
+.titulos h1 {
+	background: #403B4A;
+	background: -webkit-linear-gradient(-45deg, #E7E9BB, #403B4A); 
+	background: linear-gradient(-45deg, #E7E9BB, #403B4A);
+	filter: drop-shadow(2px 1px 1px #5C573E);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Playfair Display';
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 10px;
+	animation: ease-in-out;
+	animation-duration: 5s;
+	animation-name: titulo;
+
+} 
+
+
+@keyframes titulo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.titulos h2 { 
+	background: #403B4A;
+	background: -webkit-linear-gradient(-45deg, #E7E9BB, #403B4A); 
+	background: linear-gradient(-45deg, #E7E9BB, #403B4A);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+  	filter: drop-shadow(2px 1px 1px #5C573E);
+	font-family: 'Libre Baskerville', serif;
+	text-align: center; 
+	font-size: 1rem;
+	letter-spacing: 3px;
+	animation-duration: 7s;
+	animation-name: subtitulo;
+	
+}
+
+@keyframes subtitulo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#fondoIndex { 
+	background-color: white; 
+	background-image: url(../imagenes/fondoindex1.jpg); 
+	background-position: center;
+	background-repeat: no-repeat; 
+	background-size: cover;  
+	max-width: 100%;
+	padding-bottom: 15%;
+ }
+
+.icono {
+	font-size: 20px;
+	vertical-align: text-bottom;
+}
+button.principal {
+	font-size: 15px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	transition: 0.3s ease-in-out;
+	opacity: 1;
+	animation-duration: 3s;
+	animation-name: boton;
+	
+}
+@keyframes boton {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+button.principal:hover {
+	background-color: black;
+	text-decoration-color: white;
+	border-color: black;
+	opacity: 0.7;
+}
+
+.botonIndex a:hover {
+	text-decoration: none;
+	color: #F8F7F9;
+}
+.botonIndex a:active {
+	text-decoration: none;
+	color: #F8F7F9;
+}
+
+.botonIndex a:link {
+	text-decoration: none;
+	color: #F8F7F9;
+}
+
+.botonIndex a:visited {
+	text-decoration: none;
+	color: #F8F7F9;
+}
+
+.botonIndex {
+	opacity: 0.4;
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 15px;
+
+}
+
+
+
+/*---RESTO---*/
+.elResto {
+	padding-top: 4em;
+}
+
+.elResto h2 { 
+	color: #003D5B; 
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+	font-size: 47px;
+}
+
+.elResto h3 { 
+	color: #003D5B; 
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 27px;
+	margin-bottom: 45px;	
+}
+
+.elResto p { 
+	color: #5A5766; 
+	text-align: justify;
+	font-family: 'Lora'; 
+	font-weight: 400;
+	font-size: 20px;
+	
+}
+
+.logoResto {
+	text-align: center;
+
+}
+
+.imgResto img {
+	margin-bottom: 10px;
+}
+
+.restoFlex {
+	display: flex;
+
+}
+
+
+
+/*---MENU---*/
+
+.especiales {
+	color: #003D5B; 
+	text-align: left;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 47px;
+	margin-left: 37px;
+}
+
+.destacados {
+	color: #5A5766; 
+	font-family: 'Lora'; 
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+
+
+	
+
+/*---RESERVAS---*/
+
+.formFlex {
+	display: flex;
+	justify-content: center;
+}
+
+form {
+	width: 50%;
+	
+}
+
+fieldset { 
+	text-align:center;
+ 	background-color: rgba(0,0,0,0.68);
+}
+
+legend { 
+	text-align: center;
+	color:  #B08F7B; 
+	font-family: 'Ruthie'; 
+	font-weight: lighter;
+	font-size: 600%;
+}
+
+.mail {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.tipoEvento {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.detalles {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#horarios {
+	text-align: center;
+	color: #B08F7A; 
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bold;
+	font-size: 11px;
+	letter-spacing: 3px;
+	word-spacing: 1.2px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+ }
+
+.reservasForm section {
+	color: #B08F7A; 
+	font-family: 'Lora'; 
+	font-weight: lighter;
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%; 
+  z-index: -100;
+}
+ 
+
+#botonReservas input {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	padding: 8px 10px;
+	transition: 0.3s;
+	opacity: 1;
+	border-style: double;
+	margin-top: 25px;
+	margin-bottom: 20px;
+}
+
+
+
+
+/*---CONTACTO---*/
+
+.contacto h1 {
+	color: #003D5B; 
+	text-align: left;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 47px;
+	padding-left: 20px;
+}
+
+.contacto p {
+	 font-family: 'Lora';
+	 text-align: left; 
+	 padding-left: 20px;
+}
+
+.contacto article {
+	width: 50%;
+	float: left;
+}
+
+#mapa { 
+	background-color: #ffff; 
+	text-align: left;
+	width: 50%;
+	height: 600px;
+	float: left;
+}
+
+.redesSociales {
+	text-align: center;
+	margin-top: 10px;
+	word-spacing: 7px;
+}
+
+/*---GALERIA DE FOTOS---*/
+
+
+
+
+
+/*#galeria {
+	background-color: #fff; 
+	background-image: url(../imagenes/galeria3.jpg); 
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+*/
+
+/*---FOOTER---*/
+
+footer { 
+	background-color:#000D0C; 
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	display: inline-block;
+	width: 100%;
+	text-align: right; 
+	text-transform: uppercase;
+	opacity: 0.5;
+	position: static;
+
+}
+
+footer p {
+	padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0rem;
+	color: white;
+}
+
+
+
+/*---MEDIA QUERIES---*/
+
+/**NAVBAR MQ**/
+
+
+
+
+/**INDEX MQ**/
+
+@media (max-width: 575.98px) {
+	.titulos h1 {
+		font-size: 75px;
+	}
+}
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	.titulos h1 {
+		font-size: 95px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.titulos h1 {
+		font-size: 105px;
+	}
+}
+
+@media (min-width: 965px) {
+	.titulos h1 {
+		font-size: 120px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.titulos h1 {
+		font-size: 150px;
+	}
+}
+
+@media (max-width: 576px) { 
+	.titulos h2 {
+	font-size: 13px;
+	}
+}
+
+/**EL RESTO MQ**/
