@@ -1,50 +1,7 @@
-/**MIXINS**/
-	@mixin transicionBotones ($propiedad,$duracion,$suavizado) {
-		-webkit-transition: $propiedad $duracion;
-		-moz-transition: $propiedad $duracion;
-		-o-transition: $propiedad $duracion;
-		transition: $propiedad $duracion;
-		-webkit-transition-timing-function: $suavizado;
-		transition-timing-function: $suavizado;
-	}
+@import "mixin";
+@import "extend";
+@import "variables";
 
-/**EXTEND**/
-%estiloTitulos {
-	background: #403B4A;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(-45deg, #E1BB8AE3, #654F3C4A);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(-45deg, #E1BB8AE3, #654F3C4A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	filter: drop-shadow(2px 1px 1px #5C573E);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-align: center;
-}
-
-%animacionBoton {
-	content: '';
-	position: absolute; 
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-    z-index: 1;
-	background-color: rgba(255,255,255,0.25);
-	@include transicionBotones (all, 0.3s, cubic-bezier(0.75, 0, 0.125, 1) )
-}
-
-/**--------**/
-
-
-/**VARIABLES**/
-$colorAzulTexto: #003D5B;
-$colorHoverIndex: #F8F7F9;
-$colorAlerta: #B08F7A;
-$colorModalIconos: #2E3532;
-$colorModalTexto: #AD8A64;
-$colorTextoResto: #5A5766;
-$backgroundColorFooter: #7979793b;
-/**--------**/
 
 * {
 	margin: 0;
@@ -312,30 +269,15 @@ button.principal:hover {
 	border-color: black;
 
 }
-.botonIndex a:hover {
-	text-decoration: none;
-	color:$colorHoverIndex;
-}
-.botonIndex a:active {
-	text-decoration: none;
-	color:$colorHoverIndex;
-}
-
-.botonIndex a:link {
-	text-decoration: none;
-	color:$colorHoverIndex;
-}
-
-.botonIndex a:visited {
-	text-decoration: none;
-	color:$colorHoverIndex;
-}
-
 .botonIndex {
 	opacity: 0.4;
 	text-align: center;
 	margin-top: 80px;
 	margin-bottom: 15px;
+		a:hover, a:active, a:link, a:visited {
+			text-decoration: none;
+			color:$colorHoverIndex;
+	}
 }
 
 
@@ -397,53 +339,53 @@ button.principal:hover {
 	background-size: cover;  
 	max-width: 100%;
 }
-.menuImg {
-	text-align: center;	
-}
 
-.menuImg img {
+.menuImg {
+	text-align: center;
+		img {
 	  height: calc(100vh - 100px);
 	  margin-top: 20px;
+	}
 }
 
 /*---RESERVAS---*/
 .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+  	.popuptext {
+		visibility: hidden;
+		width: 160px;
+		background-color: #555;
+		color: white;
+		text-align: center;
+		border-radius: 6px;
+		padding: 10px;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: 50%;
+		margin-left: -80px;
+		font-family: 'Lato', sans-serif;
+		font-size: 12px;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #555 transparent transparent transparent;
+		}
+	}
+	.show {
+		visibility: visible;
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s
+		}
 }
 
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
 
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
@@ -455,10 +397,7 @@ button.principal:hover {
   to {opacity:1 ;}
 }
 
-.popuptext {
-	font-family: 'Lato', sans-serif;
-	font-size: 12px;
-}
+
 .reservas {
 	position: relative;
 	margin-top: 45px; 
@@ -608,6 +547,11 @@ footer {
 
 
 /**INDEX MQ**/
+@media (max-width: 370px) {
+	.menuImg img {
+    height: calc(100vh - 160px);
+	}
+}
 
 @media (max-width: 575.98px) {
 	.titulos h1 {

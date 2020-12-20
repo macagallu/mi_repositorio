@@ -247,27 +247,14 @@ button.principal:hover {
   text-decoration-color: white;
   border-color: black; }
 
-.botonIndex a:hover {
-  text-decoration: none;
-  color: #F8F7F9; }
-
-.botonIndex a:active {
-  text-decoration: none;
-  color: #F8F7F9; }
-
-.botonIndex a:link {
-  text-decoration: none;
-  color: #F8F7F9; }
-
-.botonIndex a:visited {
-  text-decoration: none;
-  color: #F8F7F9; }
-
 .botonIndex {
   opacity: 0.4;
   text-align: center;
   margin-top: 80px;
   margin-bottom: 15px; }
+  .botonIndex a:hover, .botonIndex a:active, .botonIndex a:link, .botonIndex a:visited {
+    text-decoration: none;
+    color: #F8F7F9; }
 
 /*---RESTO---*/
 .elResto {
@@ -316,45 +303,43 @@ button.principal:hover {
 
 .menuImg {
   text-align: center; }
-
-.menuImg img {
-  height: calc(100vh - 100px);
-  margin-top: 20px; }
+  .menuImg img {
+    height: calc(100vh - 100px);
+    margin-top: 20px; }
 
 /*---RESERVAS---*/
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer; }
-
-.popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: white;
-  text-align: center;
-  border-radius: 6px;
-  padding: 10px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px; }
-
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent; }
-
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s; }
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px; }
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent; }
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s; }
 
 @-webkit-keyframes fadeIn {
   from {
@@ -367,10 +352,6 @@ button.principal:hover {
     opacity: 0; }
   to {
     opacity: 1; } }
-
-.popuptext {
-  font-family: 'Lato', sans-serif;
-  font-size: 12px; }
 
 .reservas {
   position: relative;
@@ -489,6 +470,10 @@ footer {
 
 /**NAVBAR MQ**/
 /**INDEX MQ**/
+@media (max-width: 370px) {
+  .menuImg img {
+    height: calc(100vh - 160px); } }
+
 @media (max-width: 575.98px) {
   .titulos h1 {
     font-size: 75px; } }

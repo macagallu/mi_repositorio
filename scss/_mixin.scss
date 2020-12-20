@@ -1,0 +1,9 @@
+/**MIXINS**/
+	@mixin transicionBotones ($propiedad,$duracion,$suavizado) {
+		-webkit-transition: $propiedad $duracion;
+		-moz-transition: $propiedad $duracion;
+		-o-transition: $propiedad $duracion;
+		transition: $propiedad $duracion;
+		-webkit-transition-timing-function: $suavizado;
+		transition-timing-function: $suavizado;
+	}

@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Homemade+Apple&family=Lato&family=Lora&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/5d0ebeca49.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 
@@ -82,9 +83,11 @@
 			</section>
 			<div class="botonIndex row">
 				<section class="col-md-12">
-					<button type="button" class="principal btn btn-outline-light">
-						<a href="#reserveMesa">RESERVE UNA MESA</a>
-					</button>
+					<a href="#reservas"> 
+						<button type="button" class="principal btn btn-outline-light">
+							RESERVE UNA MESA
+						</button>
+					</a>
 				</section>
 			</div>
 		</section>
@@ -100,11 +103,11 @@
 			<section class="restoFlex row">	
 				<div class="col-md-5">
 					<aside class="imgResto">
-						<img src="./imagenes/chef1.jpg" class="img-fluid" alt="Grupo de chefs cocinando" />
-						<img src="./imagenes/chef2.jpg" class="img-fluid" alt="Chef decorando plato de comida" />
+						<img src="./imagenes/chef1.jpg" class="img-fluid wow fadeInLeft" data-wow-duration="2s" alt="Grupo de chefs cocinando" />
+						<img src="./imagenes/chef2.jpg" class="img-fluid wow fadeInLeft" data-wow-duration="2s"alt="Chef decorando plato de comida" />
 					</aside>
 				</div>
-				<article class="col-md-7">
+				<article class="col-md-7 wow fadeInRight" data-wow-duration="2s">
 					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, iste voluptatem nihil quaerat ipsum velit, molestias distinctio, enim eaque sed aliquid doloribus ex adipisci labore. Impedit nam doloremque possimus sed?
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -156,10 +159,9 @@
 			    </div>
 		  	</div>
 		</section>
-	</main>
 <!--FIN GALERIA-->
 <!--RESERVAS-->
-		<section class="reservas" id="reserveMesa">
+		<section class="reservas" id="reservas">
 	    	<video autoplay muted loop id="miVideo">
 				<source src="imagenes/reservascopas3.mp4" type="video/mp4">
 			</video>
@@ -213,12 +215,13 @@
 		            </div>
 	              	<div class="row">
 	              		<div class="col-12 text-right" style="margin-bottom: 50px">
-	              			<button id="reservas" type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
+	              			<button type="submit" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
 	              		</div>
 	    			</div>
 	            </form>
 	    	</div>
 		</section>
+	</main>
 <!--FIN RESERVAS-->
 <!--FOOTER CONTACTO-->
 	<footer class="contacto container-fluid" id="contacto">
@@ -245,11 +248,15 @@
 		</div>
 	</footer>
 <!--FIN FOOTER CONTACTO-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 		<script src="./js/jquery-3.5.1.slim.min.js"></script>
 		<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 		<script> function myFunction() { var popup = document.getElementById("myPopup");
   			popup.classList.toggle("show");}</script>
+		<script>
+          new WOW().init();
+        </script>
 	</body>
 </html>
