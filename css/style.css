@@ -101,9 +101,8 @@ a {
 
 .logo {
   transition: opacity 200ms; }
-
-.logo:hover {
-  opacity: 0.7; }
+  .logo:hover {
+    opacity: 0.7; }
 
 /*---ALERTA Y MODAL---*/
 .alerta {
@@ -332,7 +331,7 @@ button.principal:hover {
   visibility: hidden;
   width: 160px;
   background-color: #555;
-  color: #fff;
+  color: white;
   text-align: center;
   border-radius: 6px;
   padding: 10px;
@@ -417,21 +416,19 @@ video {
 #reserva {
   margin-bottom: 80px; }
 
-.tipoReserva label {
-  position: relative;
-  font-size: 15px;
-  word-spacing: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  padding: 6px 15px; }
-
-.tipoReserva .btn {
-  background: #00000099; }
-
 .tipoReserva {
   margin-bottom: 25px; }
+  .tipoReserva .btn {
+    background: #00000099; }
+  .tipoReserva label {
+    position: relative;
+    font-size: 15px;
+    word-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 6px 15px; }
 
 /*---CONTACTO---*/
 h4.redesTitle {
@@ -482,9 +479,8 @@ section.galeria {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   width: 100%; }
-
-.galeriaImg figure:hover img {
-  opacity: .5; }
+  .galeriaImg figure img:hover {
+    opacity: .5; }
 
 /*---FOOTER---*/
 footer {
