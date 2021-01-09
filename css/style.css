@@ -391,8 +391,7 @@ video {
 .botonReserve input {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-family: 'Playfair Display', serif;
   padding: 6px 15px; }
 
 #reserva {
