@@ -211,41 +211,44 @@ button.principal {
 	transition: 0.3s ease-in-out;
 	animation-duration: 3s;
 	animation-name: boton;
-	color: #E1BB8AE3;
+	color: $colorBotonIndex;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	position: relative;
-	border: 1px solid #E1BB8AE3;
+	border: 1px solid $colorBotonIndex;
 	overflow: hidden;
 	padding: 10px;
-}
-
-button.principal a {
-	color: #E1BB8AE3;
-	text-decoration: none;
-	display: block;
+		a {
+			color: $colorBotonIndex;
+			text-decoration: none;
+			display: block;
+		}
+		&:hover {
+			background-color: black;
+			text-decoration-color: white;
+			border-color: black;
+			color: white;
+		}
 }
 
 button.principal::before{
 	@extend %animacionBoton;
 	-webkit-transform: translate(13%,190%) rotate(-30deg);
 	transform: translate(13%,190%) rotate(-30deg);
-	
+	-webkit-transition-delay: 0.3s; 
+    transition-delay: 0.3s;
 }
+	
 
 button.principal::after{
 	@extend %animacionBoton;
 	-webkit-transform: translate(-13%,-190%) rotate(-30deg);
 	transform: translate(-13%,-190%) rotate(-30deg);
-
 }
 
-button.principal::before{
-	-webkit-transition-delay: 0.2s; 
-    transition-delay: 0.2s;
-}
+
 button.principal:hover::before, button.principal:hover::after{
 	-webkit-transform: translate(0,0);
 	transform: translate(0,0);	
@@ -263,13 +266,6 @@ button.principal:hover::before, button.principal:hover::after{
 	}
 }
 
-button.principal:hover {
-	background-color: black;
-	text-decoration-color: white;
-	border-color: black;
-	color: white;
-
-}
 .botonIndex {
 	opacity: 0.4;
 	text-align: center;
@@ -323,12 +319,6 @@ button.principal:hover {
 .imgResto img {
 	margin-bottom: 10px;
 }
-
-.restoFlex {
-	display: flex;
-
-}
-
 
 
 /*---MENU---*/
@@ -508,7 +498,6 @@ h4.redesTitle {
 	margin-top: 10px;
 	word-spacing: 7px;
 }
-
 
 
 /*---GALERIA DE FOTOS---*/

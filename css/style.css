@@ -212,23 +212,25 @@ button.principal {
   border: 1px solid #E1BB8AE3;
   overflow: hidden;
   padding: 10px; }
-
-button.principal a {
-  color: #E1BB8AE3;
-  text-decoration: none;
-  display: block; }
+  button.principal a {
+    color: #E1BB8AE3;
+    text-decoration: none;
+    display: block; }
+  button.principal:hover {
+    background-color: black;
+    text-decoration-color: white;
+    border-color: black;
+    color: white; }
 
 button.principal::before {
   -webkit-transform: translate(13%, 190%) rotate(-30deg);
-  transform: translate(13%, 190%) rotate(-30deg); }
+  transform: translate(13%, 190%) rotate(-30deg);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s; }
 
 button.principal::after {
   -webkit-transform: translate(-13%, -190%) rotate(-30deg);
   transform: translate(-13%, -190%) rotate(-30deg); }
-
-button.principal::before {
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s; }
 
 button.principal:hover::before, button.principal:hover::after {
   -webkit-transform: translate(0, 0);
@@ -241,12 +243,6 @@ button.principal:hover::before, button.principal:hover::after {
     opacity: 0.5; }
   100% {
     opacity: 1; } }
-
-button.principal:hover {
-  background-color: black;
-  text-decoration-color: white;
-  border-color: black;
-  color: white; }
 
 .botonIndex {
   opacity: 0.4;
@@ -289,9 +285,6 @@ button.principal:hover {
 
 .imgResto img {
   margin-bottom: 10px; }
-
-.restoFlex {
-  display: flex; }
 
 /*---MENU---*/
 .menu {
