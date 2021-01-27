@@ -1,28 +1,35 @@
-function Cliente (nombreCompleto, telefono, email, fechaEvento) {
+function Reserva (nombreCompleto, telefono, email, fechaEvento, horario, personas) {
 	this.nombreCompleto = nombreCompleto;
 	this.telefono = telefono;
 	this.email = email;
 	this.fechaEvento = fechaEvento;
+	this.horario = horario;
+	this.personas = personas;
+	this.calcularPresupuesto = function() {
+		return this.personas * 1500;
+	}
 }
 
-var nombreCompleto = prompt("Ingrese su nombre completo");
-var telefono = prompt("Ingrese un telefono de contacto");
-var email = prompt("Ingrese su email");
-var fechaEvento = prompt("Ingrese la fecha estimada del evento");
-	alert("Para estimar el presupuesto de tu evento, dirigite a la seccion RESERVAS, en el boton OTROS.");
+var reservas = [];
 
-var nuevoCliente = new Cliente(nombreCompleto, telefono, email, fechaEvento);
-
-console.log(nuevoCliente);
-
-function calcularPresupuesto(personas) {
-	return personas * 1500;
-	}
 
 function presupuestar() {
+	var nombreCompleto = prompt("Ingrese su nombre completo");
+	var telefono = prompt("Ingrese un telefono de contacto");
+	var email = prompt("Ingrese su email");
+	var fechaEvento = prompt("Ingrese la fecha estimada del evento");
+	var horario = prompt("Ingrese horario estimado");
 	var personas = parseInt(prompt("Establezca numero de personas para el evento"));
 
-	alert("El presupuesto es: " + calcularPresupuesto(personas));			
+	var nuevaReserva = new Reserva(nombreCompleto, telefono, email, fechaEvento, horario, personas);
+	
+	reservas.push(nuevaReserva);
+		console.log(reservas);
+		
+	console.log(nuevaReserva);
+		alert("El presupuesto es: " + nuevaReserva.calcularPresupuesto());
+
+	
 }
 
 
