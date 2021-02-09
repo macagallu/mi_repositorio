@@ -168,7 +168,7 @@
 		            <div class="row">
 		    			<div class="col-md-8 offset-md-2 text-center">
 		    				<h3 class="reservasTitle">Reservas</h3> 
-		    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados|</h4>
+		    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados |</h4>
 		    			</div>
 		    		</div>
 	<!--TIPO DE RESERVA-->
@@ -177,13 +177,13 @@
 		            		<div class="col-md-6">
 								<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-light active">
-										<input type="radio" name="evento" id="almuerzo" checked><i class="fas fa-utensils"></i> Almuerzo
+										<input type="radio" name="evento" id="almuerzo" value="Almerzo" checked><i class="fas fa-utensils"></i> Almuerzo
 									</label>
 									<label class="btn btn-outline-light">
-										<input type="radio" name="evento" id="cena"><i class="fas fa-glass-cheers"></i> Cena
+										<input type="radio" name="evento" id="cena" value="Cena"><i class="fas fa-glass-cheers"></i> Cena
 									</label>
 									<label class="btn btn-outline-light">
-										<input type="radio" name="evento" id="evento"><i class="fas fa-cocktail"></i> Otro									 
+										<input type="radio" name="evento" id="evento" value="Otro"><i class="fas fa-cocktail"></i> Otro
 									</label>
 								</div>
 							</div>
@@ -191,27 +191,30 @@
 	<!--DATOS DE LA RESERVA-->
 			            <div class="form-row">
 			                <div class="col-md-6 form-group">
-			                	<input type="text" name="Nombre" class="form-control" id="nombreApellido" placeholder="Nombre y Apellido">
+			                	<input type="text" name="Nombre" class="form-control campo" id="nombreApellido" placeholder="Nombre y Apellido">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail">
+			                    <input type="email" class="form-control campo" name="email" id="email" placeholder="E-mail">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="Teléfono">
+			                    <input type="telefono" class="form-control campo" name="telefono" id="telefono" placeholder="Teléfono">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="date" name="date" class="form-control" id="fecha" placeholder="Día">
+			                    <input type="date" name="date" class="form-control campo" id="fecha" placeholder="Día">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="time" class="form-control" name="time" id="horario" placeholder="Horario">
+			                    <input type="time" class="form-control campo" name="time" id="horario" placeholder="Horario">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="number" min="1" max="4" class="form-control" name="personas" id="personas" placeholder="No. de personas">
+			                    <input type="number" min="1" max="4" class="form-control campo" name="personas" id="personas" placeholder="No. de personas">
 			                </div>
 			            </div>
+			            <div id="alertPresupuesto" class="alert alert-primary d-none" role="alert">
+						 	<p>Tu presupuesto es de: <span id="resultadoPresupuesto"></span></p>
+						</div>
 		              	<div class="row">
 		              		<div class="col-12 text-right" style="margin-bottom: 50px">
-		              			<button type="button" class="botonReserve btn btn-outline-light mt-3" onclick="presupuestar()">RESERVE</button>
+		              			<button type="button" id="botonReserve" class="botonReserve btn btn-outline-light mt-3">RESERVE</button>
 		              		</div>
 		    			</div>
 		            </form>
