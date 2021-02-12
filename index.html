@@ -104,7 +104,7 @@
 					<div class="col-md-5">
 						<aside class="imgResto">
 							<img src="./imagenes/chef1.jpg" class="img-fluid wow fadeInLeft" data-wow-duration="2s" alt="Grupo de chefs cocinando" />
-							<img src="./imagenes/chef2.jpg" class="img-fluid wow fadeInLeft" data-wow-duration="2s"alt="Chef decorando plato de comida" />
+							<img src="./imagenes/chef2.jpg" class="img-fluid wow fadeInLeft" data-wow-duration="2s" alt="Chef decorando plato de comida" />
 						</aside>
 					</div>
 					<article class="col-md-7 wow fadeInRight" data-wow-duration="2s">
@@ -172,7 +172,7 @@
 		    			</div>
 		    		</div>
 	<!--TIPO DE RESERVA-->
-		            <form action="" method="post" role="form">
+		            <form action="" method="post" role="form" id="formulario">
 		            	<div class="row">
 		            		<div class="col-md-6">
 								<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
@@ -191,7 +191,7 @@
 	<!--DATOS DE LA RESERVA-->
 			            <div class="form-row">
 			                <div class="col-md-6 form-group">
-			                	<input type="text" name="Nombre" class="form-control campo" id="nombreApellido" placeholder="Nombre y Apellido">
+			                	<input type="text" class="form-control campo" name="Nombre" id="nombreApellido" placeholder="Nombre y Apellido">
 			                </div>
 			                <div class="col-md-6 form-group">
 			                    <input type="email" class="form-control campo" name="email" id="email" placeholder="E-mail">
@@ -200,17 +200,20 @@
 			                    <input type="telefono" class="form-control campo" name="telefono" id="telefono" placeholder="Teléfono">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="date" name="date" class="form-control campo" id="fecha" placeholder="Día">
+			                    <input type="date" class="form-control campo" name="date" id="fecha" placeholder="Día">
 			                </div>
 			                <div class="col-md-6 form-group">
 			                    <input type="time" class="form-control campo" name="time" id="horario" placeholder="Horario">
 			                </div>
 			                <div class="col-md-6 form-group">
-			                    <input type="number" min="1" max="4" class="form-control campo" name="personas" id="personas" placeholder="No. de personas">
+			                    <input type="number" class="form-control campo" name="personas" id="personas" placeholder="No. de personas">
 			                </div>
 			            </div>
-			            <div id="alertPresupuesto" class="alert alert-primary d-none" role="alert">
-						 	<p>Tu presupuesto es de: <span id="resultadoPresupuesto"></span></p>
+			            <div id="alertPresupuesto" class="alert alert-primary d-none presupuesto" role="alert">
+						 	<i class="fas fa-calculator"></i> Su presupuesto aproximado es de: $<strong><span id="resultadoPresupuesto"></span></strong>. Puede asesorarse mejor contactandose con nosotros por los canales de contacto.
+						</div>
+						<div class="alert alert-danger d-none" id="formularioIncompleto" role="alert">
+						<i class="fas fa-times"></i> El formulario está incompleto. Revisa todos los campos en rojo para volver a enviar tu solicitud.
 						</div>
 		              	<div class="row">
 		              		<div class="col-12 text-right" style="margin-bottom: 50px">

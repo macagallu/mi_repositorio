@@ -19,22 +19,47 @@ if (reservas==null) {
 }
 
 
-function validarCampo() {
-	var valor = $(this).val();
+function validarCampo(control) {
+	var valor = $(control).val();
 
 	if (valor == "" || valor == null) {
-		$(this).removeClass("is-valid");
-		$(this).addClass("is-invalid");
+		$(control).removeClass("is-valid");
+		$(control).addClass("is-invalid");
+		return false;
 	}
 	else {
-		$(this).removeClass("is-invalid");
-		$(this).addClass("is-valid");
+		$(control).removeClass("is-invalid");
+		$(control).addClass("is-valid");
+		return true;
 	}
-	
 }
 
+function validarFormulario() {
+	var formularioValido = true;
+
+	$(".campo").each(function(){
+		var campoValido = validarCampo(this);
+
+		if (campoValido == false) {
+			formularioValido = false;
+		}
+	})
+
+	return formularioValido;
+
+}
 
 function presupuestar() {
+	if (validarFormulario() == false) {
+		$("#formularioIncompleto").removeClass("d-none");
+		return;
+	}
+
+	else {
+		$("#formularioIncompleto").addClass("d-none");
+	}
+
+
 	var nombreCompleto = document.getElementById("nombreApellido").value;
 	var telefono = document.getElementById("telefono").value;
 	var email = document.getElementById("email").value;
@@ -44,7 +69,6 @@ function presupuestar() {
 	var almuerzo = document.getElementById("almuerzo").checked;
 	var cena = document.getElementById("cena").checked;
 	var evento = document.getElementById("evento").checked;
-
 
 	var nuevaReserva = new Reserva(nombreCompleto, telefono, email, fecha, horario, personas, almuerzo, cena, evento);
 	
@@ -60,11 +84,13 @@ function presupuestar() {
 	}
 
 	localStorage.setItem("Reservas", JSON.stringify(reservas));
+	
 }
-
-$(document).ready(function() 
-{
+$(document).ready(function() {
 	document.getElementById("botonReserve").onclick=presupuestar;
-	$(".campo").blur(validarCampo);
+	$(".campo").blur(function(){
+		validarCampo(this);
+	});
+
 });
 
