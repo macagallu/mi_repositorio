@@ -460,7 +460,12 @@ video {
 	}
 }
 
-
+label.is-invalid {
+	text-transform: lowercase;
+	color: white;
+	font-style: italic;
+	opacity: 0.5;
+}
 
 /*---CONTACTO---*/
 

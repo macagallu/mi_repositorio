@@ -404,6 +404,12 @@ video {
     font-weight: 400;
     padding: 6px 15px; }
 
+label.is-invalid {
+  text-transform: lowercase;
+  color: white;
+  font-style: italic;
+  opacity: 0.5; }
+
 /*---CONTACTO---*/
 h4.redesTitle {
   color: #003D5B;
