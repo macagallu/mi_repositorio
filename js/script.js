@@ -60,9 +60,6 @@ function presupuestar() {
 }
 $(document).ready(function() {
 	document.getElementById("botonReserve").onclick=presupuestar;
-	$(".campo").blur(function(){
-		validarCampo(this);
-	});
 
 	$("#exampleModal").modal();
 
