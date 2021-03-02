@@ -16,6 +16,7 @@ function Reserva (nombreCompleto, telefono, email, fechaEvento, horario, persona
 var validador = null;
 
 var reservas = JSON.parse(localStorage.getItem("Reservas"));
+
 if (reservas==null) {
 	reservas=[];
 }
@@ -47,17 +48,54 @@ function presupuestar() {
 	reservas.push(nuevaReserva);
 	console.log(reservas);
 
+	var tipo_reserva = null;
+
 	if (evento == true) {
 		$("#alertPresupuesto").fadeIn();
 		$("#resultadoPresupuesto").html (nuevaReserva.calcularPresupuesto());
+		tipo_reserva = "evento";
 	}
 	else {
 		$("#alertPresupuesto").fadeOut();
 	}
 
+	if (almuerzo == true) {
+		tipo_reserva = "almuerzo";
+	}
+
+	else {
+		tipo_reserva = "cena";
+	}
 	localStorage.setItem("Reservas", JSON.stringify(reservas));
 	
+	var data = {
+	    service_id: 'service_sbpq47n',
+	    template_id: 'template_x27pn1g',
+	    user_id: 'user_gegWI41IrRdiIX6vX5PS3',
+	    template_params: {
+	        from_name: 'Cherie Restaurant',
+	        to_name: nombreCompleto,
+	        tipo_reserva: tipo_reserva,
+	        fecha: fecha,
+	        horario: horario,
+	        personas: personas,
+	        telefono: telefono,
+	        email: email
+	    }
+	};
+ 
+	$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+	    type: 'POST',
+	    data: JSON.stringify(data),
+	    contentType: 'application/json'
+	}).done(function() {
+	    alert("El formulario fue enviado con exito. Chequea tu casilla de e-mail");
+	}).fail(function(error) {
+	    alert("Un error inesperado sucedio.." + JSON.stringify(error));
+	});
 }
+
+
 $(document).ready(function() {
 	document.getElementById("botonReserve").onclick=presupuestar;
 
