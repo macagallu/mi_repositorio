@@ -16,9 +16,12 @@
 <!--ALERTA Y MODAL-->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  	<div class="modal-dialog" role="document">
-	    	<div class="modal-content">
+	    	<div class="modal-content"> 
 			    <div class="modal-header">
 			        <p class="modalTitle modal-title" id="exampleModalLabel"><i class="far fa-bookmark"></i> Nuestro Compromiso</p>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			        	<span aria-hidden="true">&times;</span>
+			        </button>
 			    </div>
 		    	<div class="modal-body">
 			        <p class="modalP"> No hay nada que nos agrade más que seguir compartiendo nuestra pasión con nuestros clientes. Por eso, establecemos las siguientes medidas de seguridad, para cuidarnos y cuidar a los demás.</p>     
@@ -31,9 +34,6 @@
 			        <p class="modalP">Gracias por elegirnos,
 			        <br>
 			        <p class="firma">cherie .</p>
-			    </div>
-			    <div class="modal-footer">
-			    	<button type="button" class="btn btn-outline-dark" data-dismiss="modal">Entendido</button>
 			    </div>
 	    	</div>
 		</div>
@@ -156,14 +156,40 @@
 		            <div class="row">
 		    			<div class="col-md-8 offset-md-2 text-center">
 		    				<h3 class="reservasTitle">Reservas</h3> 
-		    				<h4 class="horarios mb-5">| Abierto de 11am a 02am - Lunes a Sábados |</h4>
+		    				<h4 class="horarios" id="horarios"></h4>
 		    			</div>
 		    		</div>
 	<!--TIPO DE RESERVA-->
+					<div class="row">
+						<button type="button" class="btn btn-outline-light col-md-6 botonHorarios" id="exampleModalCenter" data-toggle="modal" data-target="#exampleModalLong">
+							<i class="far fa-clock"></i> HORARIOS
+						</button>
+						<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered" role="document">
+							    <div class="modal-content">
+							    	<div class="modal-header">
+								        <h5 class="modal-title" id="exampleModalLongTitle">Días y Horarios Habiles</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+							     	</div>
+							      <div class="modal-body infoHorarios">
+									<p>Domingo || 11:00hs. a 22:00hs.</p>
+									<p>Lunes || Cerrado.</p>
+									<p>Martes || Cerrado.</p>
+									<p>Miércoles || 11:00hs. a 22:00hs.</p>
+									<p>Jueves || 11:00hs. a 22:00hs.</p>
+									<p>Viernes || 11:00hs. a 22:00hs.</p>
+									<p>Sábado || 11:00hs. a 22:00hs.</p>
+							      </div>
+							    </div>
+							</div>
+						</div>
+					</div>
 		            <form action="" method="post" role="form" id="formulario">
-		            	<div class="row">
-		            		<div class="col-md-6">
-								<div class="tipoReserva btn-group-toggle" data-toggle="buttons">
+		            	<div class="container">
+		            		<div class="row">
+								<div class="col-md-12 tipoReserva btn-group-toggle" data-toggle="buttons">
 									<label class="btn btn-outline-light active">
 										<input type="radio" name="evento" id="almuerzo" value="Almerzo" checked><i class="fas fa-utensils"></i> Almuerzo
 									</label>
@@ -210,6 +236,23 @@
 		    			</div>
 		            </form>
 		    	</div>
+		    	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  		<div class="modal-dialog modal-dialog-centered" role="document">
+				    	<div class="modal-content">
+				     		<div class="modal-header">
+				        		<h5 class="modal-title" id="exampleModalLongTitle">¡Reserva Enviada!</h5>
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          		<span aria-hidden="true">&times;</span>
+							        </button>
+			      			</div>
+					      	<div class="modal-body">
+					        	<p class="reservaEnviada">Muchas gracias por reservas en Cherie, el formulario fue enviado con éxito. Le enviamos el detalle de la reserva al e-mail proporcionado, sin embargo, le recordamos que la reserva esta sujeta a confirmación. Por esto, un ejecutivo de Ventas se pondrá en contacto con usted a la brevedad. </p>
+					        	<p class="reservaEnviada">Lo esperamos,</p>
+					        	<p class="firma">cherie .</p>
+					    	</div>
+			      		</div>
+				    </div>
+			  	</div>
 			</section>
 		</main>
 <!--FIN RESERVAS-->
@@ -224,14 +267,14 @@
 					<div class="row">
 						<div class="col-md-6">
 							<p>Horarios de atención telefónica</p>
-							<p>Lunes a Viernes de 09:00hs a 23:00hs</p>
+							<p>Miercoles a Domingo de 11:00hs a 22:00hs</p>
 							<p>+549 11-5777-0888</p>
 							<p>O envíenos un e-mail y nos contactaremos con usted.</p>
 							<p>galluppi.macarenasol@gmail.com</p>
 							<p>También puede encontrarnos en nuestras redes:</p>
 						</div>
 					</div>
-					<div class="redesSociales row">
+					<div class="redesSociales row" style="margin-bottom: 18px">
 						<div class="col-md-12">
 							<a href="https://es-la.facebook.com/"><img src="./imagenes/facebook1.png" width="40" height="40" alt="red social facebook"></a>
 							<a href="https://www.tripadvisor.com.ar/Restaurants"><img src="./imagenes/tripadvisor1.png" width="40" height="40" alt="red tripadvisor"></a>

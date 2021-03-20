@@ -13,6 +13,7 @@ function Reserva (nombreCompleto, telefono, email, fechaEvento, horario, persona
 	}
 }
 
+
 var validador = null;
 
 var reservas = JSON.parse(localStorage.getItem("Reservas"));
@@ -20,6 +21,7 @@ var reservas = JSON.parse(localStorage.getItem("Reservas"));
 if (reservas==null) {
 	reservas=[];
 }
+
 
 
 function presupuestar() {
@@ -66,6 +68,7 @@ function presupuestar() {
 	else {
 		tipo_reserva = "cena";
 	}
+
 	localStorage.setItem("Reservas", JSON.stringify(reservas));
 	
 	var data = {
@@ -89,14 +92,41 @@ function presupuestar() {
 	    data: JSON.stringify(data),
 	    contentType: 'application/json'
 	}).done(function() {
-	    alert("El formulario fue enviado con exito. Chequea tu casilla de e-mail");
+	    $('#myModal').modal('show');
 	}).fail(function(error) {
-	    alert("Un error inesperado sucedio.." + JSON.stringify(error));
+	    alert("Un error inesperado sucedio.. Intentalo mas tarde." + JSON.stringify(error));
 	});
 }
 
 
+	function actualizarFecha() {
+		var fechaActual = new Date ();
+		var weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+		var diaActual = fechaActual.getDay(); 
+
+		var horaActual = fechaActual.getHours();
+		var minutoActual = fechaActual.getMinutes();
+
+		if (minutoActual < 10){
+			minutoActual = "0" + minutoActual
+		};
+
+
+		var estamosAbiertos = " | Estamos abiertos! |";
+
+		if (diaActual == 1 || diaActual == 2 || horaActual <11 || horaActual >22) {
+			estamosAbiertos = " | En este momento estamos cerrados! |"
+		};
+
+		$("#horarios").html ("| Hoy es " + weekdays [diaActual] + " - " + horaActual + ":" + minutoActual + "hs. " + estamosAbiertos);
+	};
+
+
+
 $(document).ready(function() {
+
+	actualizarFecha();
+
 	document.getElementById("botonReserve").onclick=presupuestar;
 
 	$("#exampleModal").modal();

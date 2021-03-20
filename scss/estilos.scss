@@ -342,54 +342,6 @@ button.principal:hover::before, button.principal:hover::after{
 
 
 /*---RESERVAS---*/
-.popup {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-  	.popuptext {
-		visibility: hidden;
-		width: 160px;
-		background-color: #555;
-		color: white;
-		text-align: center;
-		border-radius: 6px;
-		padding: 10px;
-		position: absolute;
-		z-index: 1;
-		bottom: 125%;
-		left: 50%;
-		margin-left: -80px;
-		font-family: 'Lato', sans-serif;
-		font-size: 12px;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			margin-left: -5px;
-			border-width: 5px;
-			border-style: solid;
-			border-color: #555 transparent transparent transparent;
-		}
-	}
-	.show {
-		visibility: visible;
-		-webkit-animation: fadeIn 1s;
-		animation: fadeIn 1s
-		}
-}
-
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}
-
 
 .reservas {
 	position: relative;
@@ -397,17 +349,48 @@ button.principal:hover::before, button.principal:hover::after{
 	margin-bottom: 60px;  
 }
 
+.botonHorarios {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 17px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	border-color: gray;
+	background-color: rgba(104, 104, 104, 0.52);
+	font-size: 15px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 500;
+		i {
+		font-size: 13px;
+		vertical-align: center;
+	}
+}
+
 .horarios {
 	text-align: left;
 	color: white; 
-	font-family: 'Playfair Display', serif;
-	font-weight: bold;
+	font-family: 'Lora', sans-serif;
 	font-size: 15px;
-	letter-spacing: 3px;
+	letter-spacing: 1.5px;
 	word-spacing: 1.2px;
 	text-transform: uppercase;
-	padding-bottom: 15px;
+	padding-bottom: 5px;
  }
+
+.infoHorarios {
+	color: $colorModalTexto;
+	word-spacing: 2px;
+	font-family: 'Lora', serif;
+	font-weight: lighter;
+	font-size: 17px;
+	letter-spacing: 0.2px;
+		p {
+		margin-top: 15px;
+		text-align: center;	
+	}
+}
 
 .reservasTitle {
 	color: white; 
@@ -430,11 +413,17 @@ video {
 	object-position: center;
 }
  
-
-.botonReserve input {
+.botonReserve {
+	position: relative;
+	font-size: 15px;
+	letter-spacing: 1px;
 	text-decoration: none;
 	text-transform: uppercase;
+	border-color: gray;
+	background-color: rgba(104, 104, 104, 0.52);
+	font-size: 15px;
 	font-family: 'Playfair Display', serif;
+	font-weight: 500;
 	padding: 6px 15px;
 	
 }
@@ -444,6 +433,7 @@ video {
 }
 
 .tipoReserva {
+	margin-top: 30px;
 	margin-bottom: 25px;
 		.btn {
 		 	background: #00000099;
@@ -451,11 +441,14 @@ video {
 		label {
 			position: relative;
 			font-size: 15px;
-			word-spacing: 5px;
+			letter-spacing: 1px;
 			text-decoration: none;
 			text-transform: uppercase;
-			font-family: 'Lato', sans-serif;
-			font-weight: 400;
+			border-color: gray;
+			background-color: rgba(104, 104, 104, 0.52);
+			font-size: 15px;
+			font-family: 'Playfair Display', serif;
+			font-weight: 500;
 			padding: 6px 15px;
 	}
 }
@@ -465,6 +458,17 @@ label.is-invalid {
 	color: white;
 	font-style: italic;
 	opacity: 0.5;
+}
+
+.reservaEnviada {
+	color: $colorModalTexto;
+	word-spacing: 2px;
+	font-family: 'Lora', serif;
+	font-weight: lighter;
+	font-size: 17px;
+	letter-spacing: 0.2px;
+	text-align: justify;
+
 }
 
 /*---CONTACTO---*/
@@ -583,4 +587,3 @@ footer {
 	}
 }
 
-/**EL RESTO MQ**/
