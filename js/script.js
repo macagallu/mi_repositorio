@@ -114,7 +114,7 @@ function presupuestar() {
 
 		var estamosAbiertos = " | Estamos abiertos! |";
 
-		if (diaActual == 1 || diaActual == 2 || horaActual <11 || horaActual >22) {
+		if (diaActual == 1 || diaActual == 2 || horaActual <11 || horaActual >=22) {
 			estamosAbiertos = " | En este momento estamos cerrados! |"
 		};
 
